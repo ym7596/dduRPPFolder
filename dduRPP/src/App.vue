@@ -4,6 +4,8 @@
 
 
   <NavBara />
+  <!-- 알림 영역 (notification cookie) -->
+  <div id="notification" />
  <router-view ></router-view>
 
 
