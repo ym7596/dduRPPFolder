@@ -5,7 +5,7 @@
 - npm install bootstrap
 - npm install @popperjs/core
 - npm install vuex
-
+- npm install vue-router@next
 # database 폴더
 - npm install
 - npm install sqlite3
