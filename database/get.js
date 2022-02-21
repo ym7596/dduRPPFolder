@@ -11,7 +11,7 @@ module.exports.setup = function(app,db) {
 				result.data = row
 				db.all(
 					'SELECT * FROM tbl_my_resume ORDER BY date desc',
-					(err1, rows) => {
+					(err2, rows) => {
 						if (!err2) {
 							result.rsp = 'ok'
 							result.data.resume = rows

@@ -17,11 +17,7 @@
 				:key="menu.id"
 				>
 					<li class="nav-item" v-for="menu_object in menu.value" :key="menu_object.key">
-						<a
-						:class="{ 'nav-link':true, active: menu == menu_object.key }"
-						@click="onMovePage($event, menu_object)"
-						href="#"
-						>{{ menu_object.value }}</a>
+						<router-link :to="menu_object.url" class="nav-link">{{ menu_object.value }}</router-link>
 					</li>
 				</ul>
 			</div>
@@ -33,25 +29,25 @@ import { ref, computed } from 'vue'
 export default {
 	name: 'NavBar',
 	setup() {
-		const menu = ref('profile')
+		//const menu = ref('profile')
 		const menus = [
-			{ key: 'home', value: '홈', URL: '#', position: 'left' },
-			{ key: 'app', value: '앱', URL: '#', position: 'left' },
-			{ key: 'profile', value: '프로필', URL: '#', position: 'right' },
+			{ key: 'home', value: '홈', url: '/home', position: 'left' },
+			{ key: 'app', value: '앱', url: '/application', position: 'left' },
+			{ key: 'profile', value: '프로필', url: '/profile', position: 'right' },
 		]
 
 		const left_menus = computed(() => menus.filter((i) => i.position == 'left' ))
 		const right_menus = computed(() => menus.filter((i) => i.position == 'right' ))
 
-		const onMovePage = (evt, menu_object) => {
-			if (evt) {
-				evt.preventDefault()
-			}
-			menu.value = menu_object.key
-		}
+		// const onMovePage = (evt, menu_object) => {
+		// 	if (evt) {
+		// 		evt.preventDefault()
+		// 	}
+		// 	menu.value = menu_object.key
+		// }
 
 		return {
-			menu,
+			//menu,
 			menu_category: [
 				{
 					id: 1,
@@ -64,7 +60,7 @@ export default {
 					value: right_menus.value
 				},
 			],
-			onMovePage,
+			// onMovePage,
 		}
 	},
 }

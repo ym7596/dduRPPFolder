@@ -1,20 +1,27 @@
 <template>
-  <NavBarName />
-  <Profile />
+  <!-- <NavBarName />
+  <Application /> -->
+
+
+  <NavBara />
+ <router-view ></router-view>
+
+
+
+
+
+
 </template>
 
 <script>
-import NavBarName from '/@components/NavBar.vue'
-import Profile from '/@components/Profile.vue'
+import NavBara from '/@components/NavBar.vue'
+
 export default {
 	name: 'App',
 	components: {
-		NavBarName,
-		Profile,
-	}
+		NavBara,
+
+	},
 }
 </script>
 
-<style>
-
-</style>

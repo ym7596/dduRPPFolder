@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-import { applications } from './modules/database/type.js'
+import { applications } from './modules/applications.js'
 import { about_me } from './modules/about-me.js'
 
 
