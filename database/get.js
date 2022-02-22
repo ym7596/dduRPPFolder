@@ -78,4 +78,16 @@ module.exports.setup = function(app,db) {
 		  }
 		})
 	  })
+	  app.get('/db/accounts', (req, res, next) => {
+		let result = {
+		  rsp: 'fail',
+		}
+		db.all('SELECT * FROM tbl_accounts', (err, rows) => {
+		  return res.json({
+			rsp: 'ok',
+			data: rows,
+		  })
+		})
+	  })
+
 }

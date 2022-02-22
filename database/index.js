@@ -2,6 +2,10 @@ const sqlite3 = require('sqlite3')
 const express = require('express')
 const TYPE =require('./type.js')
 const get = require('./get.js')
+
+const post = require('./post.js')
+const put = require('./put.js')
+
 const initial = require('./initial.js')
 const cors = require('cors')
 const res = require('express/lib/response')
@@ -17,6 +21,7 @@ let db = new sqlite3.Database('database.db',(err) => {
 		initial.run(db, TYPE.resume)
 		initial.run(db, TYPE.applications)
 		initial.run(db, TYPE.notification)
+		initial.run(db, TYPE.accounts)
 	}
 })
 

@@ -62,6 +62,7 @@ export default {
 			{ key: 'home', value: '홈', url: '/home', position: 'left' },
 			{ key: 'app', value: '앱', url: '/application', position: 'left' },
 			{ key: 'profile', value: '프로필', url: '/profile', position: 'right' },
+			{ key: 'admin', value: 'Admin', url: '/admin', position: 'right'},
 		]
 
 		const left_menus = computed(() => menus.filter((i) => i.position == 'left' ))

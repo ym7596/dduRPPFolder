@@ -3,4 +3,5 @@ module.exports = {
 	resume: 2,
 	applications: 3,
 	notification: 4,
+	accounts: 5,
 }
